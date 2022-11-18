@@ -1,0 +1,299 @@
+{% extends 'base.html' %} {% load static %}{% load markdown_extras %} {% block title %} Home {% endblock %} {% block body %}
+
+
+<!-- Start Page Title Area -->
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>News And Blog</h2>
+
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">
+								Home 
+							</a>
+                </li>
+
+                <li class="active">
+                    {{post.title}}
+                </li>
+            </ul>
+
+            <img src="{% static 'images/choose-shape.png' %}" alt="Image" class="shape shape-3" data-speed="0.09" data-revert="true">
+        </div>
+    </div>
+
+    <img src="{% static 'images/subscribe-shape-1.png' %}" alt="Image" class="shape shape-1" data-speed="0.04" data-revert="true">
+    <img src="{% static 'images/subscribe-shape-2.png' %}" alt="Image" class="shape shape-2" data-speed="0.04" data-revert="true">
+</div>
+<!-- End Page Title Area -->
+
+<!-- Start Blog Area -->
+<div class="blog-area ptb-100">
+    <div class="container">
+        <div class="blog-contents">
+            <div class="blog-img">
+                <img src="{{post.thumbnail.url}}" alt="Image">
+
+                <ul class="admin d-flex justify-content-between align-items-center">
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'images/blog/admin.jpg' %}" class="rounded-circle" height="30" width="50" alt="Image"> BY ADMIN
+                        </a>
+                    </li>
+
+                    <li>
+                        <span>
+									<i class="ri-calendar-2-line"></i>
+									{{post.timestamp}}
+								</span>
+                        <a href="#">
+                            <i class="ri-bookmark-line"></i> {{post.category}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>{{post.title}}</h3>
+
+            <p>{{ post.content | markdown | safe }}</p>
+
+            <div class="content-gap-mb-35"></div>
+
+            <ul class="tag-social-link d-flex justify-content-between align-items-center">
+                <li class="tag">
+                    {% for cat in post.categories.all %}
+                    <a href="">{{cat}}</a> {% endfor %}
+
+                </li>
+
+                <li class="social">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://www.twitter.com/" target="_blank">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <i class="ri-linkedin-fill"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="content-gap-mb-35"></div>
+
+            <div class="leave-reply">
+                <h3>Leave A Comment</h3>
+
+                <form>
+                    <p>Your email address will not be published. Required fields are marked*</p>
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="form-group">
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="form-group">
+                                <input type="text" name="website" id="phone" class="form-control" placeholder="Phone No">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="form-group">
+                                <input type="text" name="website" id="website" class="form-control" placeholder="Website Link">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <textarea name="message" class="form-control" id="message" rows="8" placeholder="Comment"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    I agree to the <a href="terms-conditions.html">Terms & Conditions</a>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <button type="submit" class="default-btn">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Submit Now
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
+<!-- End Blog Area -->
+
+<!-- Start Blog Area -->
+<!-- <div class="blog-area bg-color-f3f9f8 ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span class="top-title">BLOG AND NEWS</span>
+            <h2>Better Digital Insurance Begins Right Here</h2>
+        </div>
+
+        <div class="blog-slide owl-carousel owl-theme">
+            <div class="single-blog-item">
+                <a href="#">
+                    <img src="{% static 'images/blog/blog-1.jpg' %}" alt="Image">
+                </a>
+
+                <div class="blog-content">
+                    <span>14 AUG 2021</span>
+                    <ul>
+                        <li>
+                            <a href="our-team.html">BY ADMIN
+									</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">INSURANCE</a>
+                        </li>
+                    </ul>
+                    <h3>
+                        <a href="#">Ambulance Cover Of Fire On Insurance Serving</a>
+                    </h3>
+
+                    <a href="#" class="default-btn">
+                        <i class="ri-arrow-right-s-line"></i> Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="single-blog-item">
+                <a href="#">
+                    <img src="{% static 'images/blog/blog-2.jpg' %}" alt="Image">
+                </a>
+
+                <div class="blog-content">
+                    <span>14 AUG 2021</span>
+                    <ul>
+                        <li>
+                            <a href="our-team.html">BY ADMIN
+									</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">INSURANCE</a>
+                        </li>
+                    </ul>
+                    <h3>
+                        <a href="#">Insurance Covers Risk Of Fire Absence Of Fire Insurance</a>
+                    </h3>
+
+                    <a href="#" class="default-btn">
+                        <i class="ri-arrow-right-s-line"></i> Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="single-blog-item">
+                <a href="#">
+                    <img src="{% static 'images/blog/blog-3.jpg' %}" alt="Image">
+                </a>
+
+                <div class="blog-content">
+                    <span>14 AUG 2021</span>
+                    <ul>
+                        <li>
+                            <a href="our-team.html">BY ADMIN
+									</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">INSURANCE</a>
+                        </li>
+                    </ul>
+                    <h3>
+                        <a href="#">What Is Personal Liability Umbrella Coverage</a>
+                    </h3>
+
+                    <a href="#" class="default-btn">
+                        <i class="ri-arrow-right-s-line"></i> Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="single-blog-item">
+                <a href="#">
+                    <img src="{% static 'images/blog/blog-4.jpg' %}" alt="Image">
+                </a>
+
+                <div class="blog-content">
+                    <span>14 AUG 2021</span>
+                    <ul>
+                        <li>
+                            <a href="our-team.html">BY ADMIN
+									</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">INSURANCE</a>
+                        </li>
+                    </ul>
+                    <h3>
+                        <a href="#">Insurance Covers Risk Of Fire Absence Of Fire Insurance</a>
+                    </h3>
+
+                    <a href="#" class="default-btn">
+                        <i class="ri-arrow-right-s-line"></i> Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- End Blog Area -->
+
+
+
+< <!-- Start Subscribe Area -->
+    <div class="subscribe-area ptb-100">
+        <div class="container">
+            <div class="section-title">
+                <span class="top-title">READY TO GET STARTED</span>
+                <h2>Get The Latest Insurance News In Minutes</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed placerat elementum. Urna eu et purus et mi sit rhoncus..</p>
+            </div>
+
+            <div class="subscribe-content">
+                <form class="newsletter-form" data-toggle="validator">
+                    <input type="email" class="form-control" placeholder="Email address" name="EMAIL" required autocomplete="off">
+
+                    <button class="default-btn" type="submit">
+							<i class="ri-send-plane-2-line"></i>
+							Subscribe
+						</button>
+
+                    <div id="validator-newsletter" class="form-result"></div>
+                </form>
+
+                <img src="{% static 'images/subscribe-shape-1.png' %}" alt="Image" class="shape shape-1" data-speed="0.04" data-revert="true">
+                <img src="{% static 'images/subscribe-shape-2.png' %}" alt="Image" class="shape shape-2" data-speed="0.04" data-revert="true">
+            </div>
+        </div>
+    </div>
+    <!-- End Subscribe Area -->
+
+
+    {% endblock %}

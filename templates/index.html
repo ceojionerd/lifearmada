@@ -1,0 +1,844 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Home {% endblock %} {% block body %}
+
+<!-- Start Banner Area -->
+<div class="banner-area bg-color-f3f9f8 pt-65 pb-100">
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-center">
+            <div class="col" style="text-align: center">
+                <div class="banner-content" style="padding: 10% !important">
+                    <h1><span>Life</span> Armada Health <span>Consultancy</span></h1>
+                    <p>
+                        Take The Worry Out Of Life with Improved Overall Health and Health Solutions Beyond Healthcare, all while shaping the future of comprehensive health-care coverage.
+                    </p>
+                    <!-- <h1>Take The Worry Out Of Life With our <span>Health</span> Plans with Benefits</h1> -->
+                    <div class="banner-btn">
+                        {%if request.user.is_authenticated %}
+                        <a href="{% url 'profile' %}" class="default-btn">
+                            <i class="ri-arrow-right-s-line"></i> Go to Dashboard </a>{% else %}
+                        <a href="{% url 'home' %}" class="default-btn">
+                            <i class="ri-arrow-right-s-line"></i> Get Started </a>{% endif %}
+                        <a href="" class="default-btn active">
+                            <i class="ri-send-plane-fill"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-6">
+							<div class="banner-img">
+								<img src="{% static 'images/banner/banner-img.png' %}" alt="Image of a mother and a happy baby">
+								<img src="{% static 'images/banner/banner-img-shape.png' %}" class="banner-img-shape" alt="Image">
+							</div>
+						</div> -->
+        </div>
+    </div>
+    <div class="banner-bottom-shape">
+        <img src="{% static 'images/banner/bottom-shape.png' %}" alt="Image" />
+    </div>
+    <div class="shape shape-1" data-speed="0.04" data-revert="true">
+        <img src="{% static 'images/banner/shape-1.png' %}" alt="Image" />
+    </div>
+    <div class="shape shape-2" data-speed="0.05" data-revert="true">
+        <img src="{% static 'images/banner/shape-2.png' %}" alt="Image" />
+    </div>
+    <div class="shape shape-3" data-speed="0.06" data-revert="true">
+        <img src="{% static 'images/banner/shape-3.png' %}" alt="Image" />
+    </div>
+    <div class="shape shape-4" data-speed="0.07" data-revert="true">
+        <img src="{% static 'images/banner/shape-4.png' %}" alt="Image" />
+    </div>
+    <div class="shape shape-5" data-speed="0.08" data-revert="true">
+        <img src="{% static 'images/banner/shape-5.png' %}" alt="Image" />
+    </div>
+    <div class="shape shape-6" data-speed="0.09" data-revert="true">
+        <img src="{% static 'images/banner/shape-6.png' %}" alt="Image" />
+    </div>
+</div>
+<!-- End Banner Area -->
+
+<!-- Start About Area -->
+<div class="about-area bg-color-f8f8f8 pt-100 pb-70">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-content mr-15">
+                    <span class="top-title">ABOUT LIFE ARMADA</span>
+                    <h2>Health Consultancy That Creates Wealth For Everyone</h2>
+
+                    <ul>
+                        <li style="box-shadow: none !important">
+                            <i class="flaticon-insurance-3"></i>
+                            <h3>Who we Are?</h3>
+                            <ul class="about-list" style="list-style-type: disc !important">
+                                <li style="
+                    padding: 0;
+                    box-shadow: none !important;
+                    list-style-type: disc !important;
+                  ">
+                                    We are a collective of healthcare providers in different capacities; ranging from nursing care pro-viders to medical doctors working with community organizers and hospitals all based in Nigeria.
+                                </li>
+                                <li style="
+                    padding: 0;
+                    box-shadow: none !important;
+                    list-style-type: disc !important;
+                  ">
+                                    We help our clients navigate the health care sector by organizing sustainable health awareness campaigns, and facilitating subscription health insurance schemes.
+                                </li>
+                                <li style="
+                    padding: 0;
+                    box-shadow: none !important;
+                    list-style-type: disc !important;
+                  ">
+                                    We are a force for good.
+                                </li>
+                            </ul>
+                        </li>
+                        <li style="box-shadow: none !important">
+                            <i class="flaticon-insurance-4"></i>
+                            <h3>Our Primary Goal</h3>
+                            <ul style="list-style-type: disc !important">
+                                <li style="
+                    padding: 0;
+                    box-shadow: none !important;
+                    list-style-type: disc !important;
+                  ">
+                                    To facilitate health awareness programs
+                                </li>
+                                <li style="
+                    padding: 0;
+                    box-shadow: none !important;
+                    list-style-type: disc !important;
+                  ">
+                                    To facilitate a health management organizations (HMO) enrollment scheme.
+                                </li>
+                            </ul>
+                        </li>
+                        <li style="box-shadow: none !important">
+                            <i class="flaticon-life-insurance"></i>
+                            <h3>Our Place in the Healthcare Sector</h3>
+                            <p>
+                                A major challenge in low income country like regarding healthcare provision is a paucity of infor-mation available to the public on how to access care in the opaque health health system. This also compounds the lack of information among the public required
+                                to manage their health. There is a pro-liferation of misinformations; a prevalence of half truth characterized by over spiritualized treatments and an overt dependence on tradition healing practices. We are actively involved
+                                in health awareness programs to address these deficiencies in health in-formation among the public.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="about-img ml-15 mb-0">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="about-1">
+                                <img src="{% static 'images/copy-3.jpg' %}" alt="Image" />
+                            </div>
+                            <div class="about-2">
+                                <img src="{% static 'images/copy.jpg' %}" alt="Image" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="about-3">
+                                <img src="{% static 'images/about-1.jpg' %}" alt="Image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End About Area -->
+<!-- Start Blog Area -->
+<!-- <div class="blog-area bg-color-f3f9f8 pt-100 pb-150">
+    <div class="container">
+        <div class="section-title">
+            <span class="top-title">BLOG AND NEWS</span>
+            <h2>Better Health Consultancy Begins Right Here</h2>
+        </div>
+
+        <div class="blog-slide owl-carousel owl-theme">
+            {% if latest %} {% for post in latest %}
+            <div class="single-blog-item">
+                <a href="{% url 'post' post.slug %}">
+                    <img src="{{post.thumbnail.url}}" alt="Image">
+                </a>
+
+                <div class="blog-content">
+                    <span>{{post.timestamp}}</span>
+                    <ul>
+                        <li>
+                            <a href="#">BY ADMIN
+									</a>
+                        </li>
+                        <li>
+                            <a href=" # ">{{post.category}}</a>
+                        </li>
+                    </ul>
+                    <h3>
+                        <a href="{% url 'post' post.slug %} ">{{post.title}}</a>
+                    </h3>
+
+                    <a href="{% url 'post' post.slug %} " class="default-btn ">
+                        <i class="ri-arrow-right-s-line "></i> Read More
+                    </a>
+                </div>
+            </div>
+            {% endfor %} {% endif %}
+        </div>
+        <div class="section-title">
+            <a href="{% url 'home' %}" class="top-title">See All Post <i class="ri-arrow-right-s-line"></i></a>
+        </div>
+    </div>
+
+    <img src="{% static 'images/subscribe-bottom-shape.png' %} " alt="Image " class="subscribe-bottom-shape ">
+</div> -->
+<!-- End Blog Area -->
+
+<!-- Start Services Area -->
+<div class="services-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span class="top-title">HEALTH AWARESS PROGRAMS</span>
+            <h2>Hightlights of Events We Host To Create Health Awareness</h2>
+        </div>
+
+        <div class="services-slide owl-carousel owl-theme">
+            <div class="single-services-item bg-1 style-three d-flex align-items-end">
+                <div class="services-contents">
+                    <ul>
+                        <li>EXERCISE</li>
+                        <li>HEALTH</li>
+                    </ul>
+                    <h3>
+                        <a href="">RUN FOR LIFE</a>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="single-services-item bg-2 style-three d-flex align-items-end">
+                <div class="services-contents">
+                    <ul>
+                        <li>AWARENESS</li>
+                        <li>CAMPAIGN</li>
+                    </ul>
+                    <h3>
+                        <a href="">Health AWARENESS CAMPAIGN</a>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="single-services-item bg-3 style-three d-flex align-items-end">
+                <div class="services-contents">
+                    <ul>
+                        <li>HEALTH</li>
+                        <li>WEALTH</li>
+                    </ul>
+                    <h3>
+                        <a href="">Health & Wealth Campaign</a>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="single-services-item bg-4 style-three d-flex align-items-end">
+                <div class="services-contents">
+                    <ul>
+                        <li>HEALTH</li>
+                        <li>SLEEP</li>
+                    </ul>
+                    <h3>
+                        <a href="">GOOD SLEEP</a>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="single-services-item bg-5 style-three d-flex align-items-end">
+                <div class="services-contents">
+                    <ul>
+                        <li>PARTNERSHIP</li>
+                        <li>PROFESSIONALS</li>
+                    </ul>
+                    <h3>
+                        <a href="">PARTNERSHIPS WITH PROFESSIONALS</a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-all">
+            <p>
+                we are passionate and committed to keeping you healthy.
+                <a href="{% url 'home' %}">View All</a>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- End Services Area -->
+
+<!-- Start Our Features Area -->
+<div class="our-features-area pt-50 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span class="top-title">OUR FEATURES</span>
+            <h2>Better Health Consultancy Begins Right Here</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-features-item">
+                    <i class="fi fi-rr-biking-mountain"></i>
+                    <h3>Health Awareness Programs</h3>
+                    <p>
+                        We are actively involved in health awareness programs to address these deficiencies in health in-formation among the public.
+                    </p>
+                    <a href="" class="default-btn"> Learn More </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-features-item">
+                    <i class="fi fi-rr-pulse"></i>
+                    <h3>Health Care Plans</h3>
+                    <p>
+                        Quality Health Insurance cover across the world has become a topical issue, especially following the recent global pandemic. we connect you with the best health care cover money can buy.
+                    </p>
+                    <a href="" class="default-btn"> Learn More </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-features-item">
+                    <i class="fi fi-rr-pulse"></i>
+                    <h3>Emotional Health Consultation</h3>
+                    <p>
+                        Quality Health Insurance cover across the world has become a topical issue, especially following the recent global pandemic. we connect you with the best health care cover money can buy.
+                    </p>
+                    <a href="" class="default-btn"> Learn More </a>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-3 col-sm-6">
+						<div class="single-features-item">
+							<i class="fi fi-rs-data-transfer"></i>
+							<h3>Pro Plans</h3>
+							<p>
+							</p>
+
+							<a href="" class="default-btn">
+								Learn More
+							</a>									
+
+						</div>
+					</div> -->
+        </div>
+    </div>
+</div>
+<!-- End Our Features Area -->
+
+<!-- Start Pricing Area -->
+<div class="pricing-area pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span class="top-title">Health Care PLANS</span>
+            <h2>Health Care Plan That Works</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-pricing">
+                    <div class="price-title">
+                        <h3>Individual Plan</h3>
+                        <span>For Single User</span>
+                    </div>
+
+                    <ul>
+                        <li><i class="ri-check-line"></i> Out Patient Benefit</li>
+                        <li><i class="ri-check-line"></i> Specialist Consultation</li>
+                        <li>
+                            <i class="ri-check-line"></i> Preventive & Health Promotion Benefits
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i> Under Five Immunization Benefit
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i> Major Disease Condition Benefits
+                        </li>
+                        <li><i class="ri-check-line"></i> Reproductive Health Benefit</li>
+                        <li><i class="ri-check-line"></i> In-Patient Benefit</li>
+                        <li>
+                            <i class="ri-check-line"></i> Peadeatric with Neonatologist & Peadeatritian
+                        </li>
+                        <li><i class="ri-check-line"></i> Accident & Emergency Benefit</li>
+                        <li><i class="ri-check-line"></i> Eye Care Benefit</li>
+                        <li><i class="ri-check-line"></i> Dental Care Benefit</li>
+                        <li><i class="ri-check-line"></i> Additional Care Benefit</li>
+                        <li><i class="ri-check-line"></i> 24/7 Support</li>
+                    </ul>
+
+                    <a href="{% url 'home' %}" class="default-btn"> Get Started </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-pricing">
+                    <div class="price-title">
+                        <h3>Group Plan</h3>
+                        <span>Family, Business</span>
+                    </div>
+
+                    <ul>
+                        <li><i class="ri-check-line"></i> Out Patient Benefit</li>
+                        <li><i class="ri-check-line"></i> Specialist Consultation</li>
+                        <li>
+                            <i class="ri-check-line"></i> Preventive & Health Promotion Benefits
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i> Under Five Immunization Benefit
+                        </li>
+                        <li>
+                            <i class="ri-check-line"></i> Major Disease Condition Benefits
+                        </li>
+                        <li><i class="ri-check-line"></i> Reproductive Health Benefit</li>
+                        <li><i class="ri-check-line"></i> In-Patient Benefit</li>
+                        <li>
+                            <i class="ri-check-line"></i> Peadeatric with Neonatologist & Peadeatritian
+                        </li>
+                        <li><i class="ri-check-line"></i> Accident & Emergency Benefit</li>
+                        <li><i class="ri-check-line"></i> Eye Care Benefit</li>
+                        <li><i class="ri-check-line"></i> Dental Care Benefit</li>
+                        <li><i class="ri-check-line"></i> Additional Care Benefit</li>
+                        <li><i class="ri-check-line"></i> 24/7 Support</li>
+                    </ul>
+
+                    <a href="{% url 'home' %}" class="default-btn"> Get Started </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Pricing Area -->
+
+{% comment %}
+<!-- Start Services Area -->
+<div class="services-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span class="top-title">INSURANCE SERVICES</span>
+            <h2>Take The Worry Out Of Life With Insurance Protection</h2>
+        </div>
+
+        <div class="services-slide owl-carousel owl-theme">
+            <div class="single-services-item bg-1 style-three d-flex align-items-end">
+                <div class="services-contents">
+                    <ul>
+                        <li>INSURANCE</li>
+                        <li>HEALTH</li>
+                    </ul>
+                    <h3>
+                        <a href="">Health Insurance</a>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="single-services-item bg-2 style-three d-flex align-items-end">
+                <div class="services-contents">
+                    <ul>
+                        <li>INSURANCE</li>
+                        <li>TERM LIFE</li>
+                    </ul>
+                    <h3>
+                        <a href="">Home Insurance</a>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="single-services-item bg-3 style-three d-flex align-items-end">
+                <div class="services-contents">
+                    <ul>
+                        <li>INSURANCE</li>
+                        <li>VEHICLE</li>
+                    </ul>
+                    <h3>
+                        <a href="">Business Insurance</a>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="single-services-item bg-4 style-three d-flex align-items-end">
+                <div class="services-contents">
+                    <ul>
+                        <li>INSURANCE</li>
+                        <li>VEHICLE</li>
+                    </ul>
+                    <h3>
+                        <a href="">Vehicle Insurance</a>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="single-services-item bg-5 style-three d-flex align-items-end">
+                <div class="services-contents">
+                    <ul>
+                        <li>INSURANCE</li>
+                        <li>CAR</li>
+                    </ul>
+                    <h3>
+                        <a href="">Car Insurance</a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-all">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed placerat elementum. Urna eu et purus et mi sit rhoncus
+                <a href="{% url 'home' %}">View All</a>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- End Services Area -->
+
+<!-- Start Why Choose Us Area -->
+<div class="why-choose-us-area bg-color-f8f8f8 pt-100 pb-70">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="choose-us-img mr-15">
+                    <img src="{% static 'images/choose-us-img.jpg' %}" alt="Image" />
+                    <img src="{% static 'images/choose-shape.png' %}" class="choose-shape shape" alt="Image" data-speed="0.04" data-revert="true" />
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="choose-us-content ml-15">
+                    <span class="top-title">WHY CHOOSE US</span>
+                    <h2>Our Company Has Been Working Very Faithfully</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed placerat elementum. Urna eu et purus et mi sit rhoncus. Id nisl quis arcu nulla leo.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6">
+                            <ul class="mb-24">
+                                <li>
+                                    <i class="ri-check-double-line"></i> Protective Protection
+                                </li>
+                                <li>
+                                    <i class="ri-check-double-line"></i> Homeowner Insurance
+                                </li>
+                                <li><i class="ri-check-double-line"></i> Consultations</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6">
+                            <ul>
+                                <li>
+                                    <i class="ri-check-double-line"></i> Money Back Guarantee
+                                </li>
+                                <li><i class="ri-check-double-line"></i> Partnership System</li>
+                                <li><i class="ri-check-double-line"></i> safety Ensure</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Why Choose Us Area -->
+
+<!-- Start Our Team Area -->
+<div class="our-team-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span class="top-title">EXPERT TEAM</span>
+            <h2>Meet Our Team Expert & Experience Members</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-team-item">
+                    <img src="{% static 'images/team/team-1.jpg' %}" alt="Image" />
+
+                    <div class="team-content">
+                        <a href="/cdn-cgi/l/email-protection#e8808d848481a881868b8d98c68b8785" class="mail">
+                            <i class="ri-mail-line"></i>
+                        </a>
+
+                        <h3>Mesiva Sccot</h3>
+                        <span>Marketing Ex.</span>
+
+                        <ul>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-twitter-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-linkedin-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-team-item">
+                    <img src="{% static 'images/team/team-2.jpg' %}" alt="Image" />
+
+                    <div class="team-content">
+                        <a href="/cdn-cgi/l/email-protection#afc7cac3c3c6efc6c1cccadf81ccc0c2" class="mail">
+                            <i class="ri-mail-line"></i>
+                        </a>
+
+                        <h3>Jeson Thomson</h3>
+                        <span>Marketing Ex.</span>
+
+                        <ul>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-twitter-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-linkedin-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-team-item">
+                    <img src="{% static 'images/team/team-3.jpg' %}" alt="Image" />
+
+                    <div class="team-content">
+                        <a href="/cdn-cgi/l/email-protection#7c14191010153c15121f190c521f1311" class="mail">
+                            <i class="ri-mail-line"></i>
+                        </a>
+
+                        <h3>Kohn Wright</h3>
+                        <span>Marketing Ex.</span>
+
+                        <ul>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-twitter-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-linkedin-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-team-item">
+                    <img src="{% static 'images/team/team-4.jpg' %}" alt="Image" />
+
+                    <div class="team-content">
+                        <a href="/cdn-cgi/l/email-protection#bad2dfd6d6d3fad3d4d9dfca94d9d5d7" class="mail">
+                            <i class="ri-mail-line"></i>
+                        </a>
+
+                        <h3>Andrew Schimke</h3>
+                        <span>Marketing Ex.</span>
+
+                        <ul>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-twitter-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#https://www.facebook.com/" target="_blank">
+                                    <i class="ri-linkedin-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="view-all">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed placerat elementum. Urna eu et purus et mi sit rhoncus <a href="{% url 'home' %}">View All</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Our Team Area -->
+
+<!-- Start Our Review Area -->
+<div class="our-review-area bg-color-497774 pt-100 pb-70">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="single-review-item">
+                            <div class="review-img">
+                                <img src="{% static 'images/review/review-1.jpg' %}" alt="Image" />
+                                <i class="ri-double-quotes-r"></i>
+                            </div>
+
+                            <ul>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                            </ul>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+
+                            <h3>Manika Selven</h3>
+                            <span>Marketing Ex.</span>
+                        </div>
+
+                        <div class="single-review-item width">
+                            <ul>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                            </ul>
+
+                            <p>Average 4.6 from 1200+ reviews of our customers.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="single-review-item">
+                            <div class="review-img">
+                                <img src="{% static 'images/review/review-2.jpg' %}" alt="Image" />
+                                <i class="ri-double-quotes-r"></i>
+                            </div>
+
+                            <ul>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                            </ul>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+
+                            <h3>Jhun Selven</h3>
+                            <span>Marketing Ex.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="review-content">
+                    <span class="top-title">OUR REVIEW</span>
+                    <h2>What they say about us honest reviews</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed placerat elementum. Urna eu et purus et mi sit rhoncus
+                    </p>
+
+                    <a href="{% url 'home' %}" class="default-btn">
+                        <i class="ri-arrow-right-s-line"></i> View More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="{% static 'images/review/shape-1.png' %}" alt="Image" class="shape shape-1" data-speed="0.04" data-revert="true" />
+    <img src="{% static 'images/review/shape-2.png' %}" alt="Image" class="shape shape-2" data-speed="0.04" data-revert="true" />
+    <img src="{% static 'images/review/shape-3.png' %}" alt="Image" class="shape shape-3" data-speed="0.04" data-revert="true" />
+</div>
+<!-- End Our Review Area -->
+
+{% endcomment %} {% endblock %}

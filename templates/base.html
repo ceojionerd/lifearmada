@@ -1,0 +1,514 @@
+{% load static %}
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Links Of CSS File -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/remixicon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/meanmenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/odometer.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+    <!-- Fonticon Icons -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static '/images/favicon.png' %}">
+    <!-- Title -->
+    <title>{% block title %}{% endblock %} - Life Armada</title>
+</head>
+
+<body>
+    <!-- Start Preloader Area -->
+    <div class="preloader">
+        <div class="content">
+            <div class="box"></div>
+        </div>
+    </div>
+    <!-- End Preloader Area -->
+
+    <!-- Start Navbar Area -->
+    <div class="navbar-area">
+        <div class="mobile-responsive-nav">
+            <div class="container">
+                <div class="mobile-responsive-menu">
+                    <div class="logo">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'images/logo.png' %}" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="desktop-nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" href="{% url 'home' %}">
+                        <img height="70" width="200" src="{% static 'images/logo.png' %}" alt="logo">
+                    </a>
+
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <div class="others-options ml-30">
+                            <form class="search-form">
+                                <input class="form-control" type="search" placeholder="Search here...">
+                                <button class="search-btn" type="submit">
+                                    <i class="ri-search-line"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item">
+                                <a href="{% url 'home' %}" class="nav-link">
+                                    Home 
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{% url 'about' %}" class="nav-link">
+                                    About Us
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{% url 'home' %}" class="nav-link">
+                                    Services 
+                                </a>
+                            </li>
+
+                            <!-- <li class="nav-item">
+                                <a href="#" class="nav-link dropdown-toggle">
+                                    Our Plans            
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Titanium Compact</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Titanium Klassic</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Titanium Ultra</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Titanium Deluxe</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Titanium Royal</a>
+                                    </li>
+                                </ul>
+                            </li> -->
+
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Contact Us</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link dropdown-toggle">
+                                    More      
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    {% if user.is_authenticated %}
+                                    <li class="nav-item">
+                                        <a href="{% url 'logout' %}" class="nav-link">Logout</a>
+                                    </li>
+                                    {% else %}
+                                    <li class="nav-item">
+                                        <a href="{% url 'login' %}" class="nav-link">Login</a>
+                                    </li>{% endif %}
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Pricing Plans</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Live Support</a>
+                                    </li>
+
+                                    <li class="nav-item">
+
+                                    </li>
+
+                                    <!-- <li class="nav-item">
+                                        <a href="#" class="nav-link dropdown-toggle">
+                                            Consultancy Plans            
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="" class="nav-link">Titanium Compact</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="" class="nav-link">Titanium Klassic</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="" class="nav-link">Titanium Ultra</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="" class="nav-link">Titanium Deluxe</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="" class="nav-link">Titanium Royal</a>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+
+
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="others-options">
+                            <ul class="d-flex justify-content-between align-items-center">
+                                <li>
+                                    <a href="tel:+2348177559366" class="call-us">
+                                        <i class="ri-phone-line"></i> +234 817 755 9366
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="default-btn">
+                                        <i class="ri-edit-line"></i> Write To Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <button class="menu-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                                        <i class="flaticon-right-menu-bars"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="others-option-for-responsive">
+            <div class="container">
+                <div class="dot-menu">
+                    <div class="inner">
+                        <div class="circle circle-one"></div>
+                        <div class="circle circle-two"></div>
+                        <div class="circle circle-three"></div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="option-inner">
+                        <div class="others-options justify-content-center d-flex align-items-center">
+                            <ul>
+                                <li>
+                                    <form class="search-form">
+                                        <input class="form-control" type="search" placeholder="Search here...">
+                                        <button class="search-btn" type="submit">
+                                            <i class="ri-search-line"></i>
+                                        </button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <a href="tel:+2348177559366" class="call-us">
+                                        <i class="ri-phone-line"></i> +234 817 755 9366
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="default-btn">
+                                        <i class="ri-edit-line"></i> get a quote
+                                    </a>
+                                </li>
+                                <li>
+                                    <button class="menu-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                                        <i class="flaticon-right-menu-bars"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="others-option-for-responsive">
+            <div class="container">
+                <div class="dot-menu">
+                    <div class="inner">
+                        <div class="circle circle-one"></div>
+                        <div class="circle circle-two"></div>
+                        <div class="circle circle-three"></div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="option-inner">
+                        <div class="others-options justify-content-center d-flex align-items-center">
+                            <ul>
+                                <li>
+                                    <form class="search-form">
+                                        <input class="form-control" type="search" placeholder="Search here...">
+                                        <button class="search-btn" type="submit">
+                                            <i class="ri-search-line"></i>
+                                        </button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <a href="tel:+2348177559366" class="call-us">
+                                        <i class="ri-phone-line"></i> +234 817 755 9366
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="default-btn">
+                                        <i class="ri-edit-line"></i> get a quote
+                                    </a>
+                                </li>
+                                <li>
+                                    <button class="menu-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                                        <i class="flaticon-right-menu-bars"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar Area -->
+
+    <!-- Start Offcanvas Area -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+        <div class="offcanvas-header">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images/logo.png' %}" alt="Image">
+            </a>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="about-us off-mb-30">
+                <h3>About Us</h3>
+                <p>At LIFE ARMADA HEALTH CONSULTANCY we are geared towards the communication of a healthy lifestyle to the world.</p>
+            </div>
+
+            <div class="contact-info off-mb-30">
+                <h3>Contact Info</h3>
+
+                <ul class="contact-list">
+                    <li>
+                        <i class="ri-map-pin-line"></i> Plot 3011 Rafiu Babatunde Road Lagos Alao Bus Stop, Lagos
+                    </li>
+                    <li>
+                        <i class="ri-phone-fill"></i>
+                        <a href="tel:+234 817 755 9366">+234 817 755 9366</a>
+                    </li>
+                    <li>
+                        <i class="ri-mail-line"></i>
+                        <a href="mailto:info@lifearmada.com"><span class="__cf_email__">info@lifearmada.com</span></a>
+                    </li>
+                    <li>
+                        <i class="ri-time-line"></i> (9am - 5pm EST, Monday - Friday)
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Offcanvas Area -->
+
+    {% block body %} {% endblock %}
+
+    <!-- Start Subscribe Area -->
+    <div class="subscribe-area pt-50 pb-100">
+        <div class="container">
+            <div class="section-title">
+                <span class="top-title">READY TO GET STARTED</span>
+                <h2>Get The Latest Health News In Minutes</h2>
+                <p>To get updated on best health practices, and our programmes.</p>
+            </div>
+
+            <div class="subscribe-content">
+                <form class="newsletter-form" data-toggle="validator">
+                    <input type="email" class="form-control" placeholder="Email address" name="EMAIL" required autocomplete="off">
+
+                    <button class="default-btn" type="submit">
+							<i class="ri-send-plane-2-line"></i>
+							Subscribe
+						</button>
+
+                    <div id="validator-newsletter" class="form-result"></div>
+                </form>
+
+                <img src="{% static 'images/subscribe-shape-1.png' %}" alt="Image" class="shape shape-1" data-speed="0.04" data-revert="true">
+                <img src="{% static 'images/subscribe-shape-2.png' %}" alt="Image" class="shape shape-2" data-speed="0.04" data-revert="true">
+            </div>
+        </div>
+    </div>
+    <!-- End Subscribe Area -->
+
+    <!-- Start Footer Area -->
+    <div class="footer-area bg-color-f3f9f8 pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="single-footer-widget">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'images/logo.png' %}" alt="Image">
+                        </a>
+
+                        <ul class="contact-info">
+                            <li>
+                                <span>Location:</span> Plot 3011 Rafiu Babatunde Road Lagos Alao Bus Stop, Lagos
+                            </li>
+                            <li>
+                                <span>Contact:</span>
+                                <a href="tel:+234 817 755 9366">+234 817 755 9366</a>
+                            </li>
+                            <li>
+                                <span>Time:</span> (9am - 5pm EST, Monday - Friday)
+                            </li>
+                            <li>
+                                <span>Email:</span>
+                                <a href="mailto:info@lifearamada.com">info@lifearmada.com</a>
+                            </li>
+                        </ul>
+
+                        <!-- <ul class="social-link">
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com/" target="_blank">
+                                    <i class="ri-twitter-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/" target="_blank">
+                                    <i class="ri-linkedin-fill"></i>
+                                </a>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-4">
+                            <div class="single-footer-widget">
+                                <h3>Company</h3>
+
+                                <ul class="use-link">
+                                    <li>
+                                        <a href="">Case Studies</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Case Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Privacy Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Services</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-4">
+                            <div class="single-footer-widget">
+                                <h3>Explore</h3>
+
+                                <ul class="use-link">
+                                    <li>
+                                        <a href="">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Blog And News</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Blog Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Pricing</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-4">
+                            <div class="single-footer-widget">
+                                <h3>Consultancy</h3>
+
+                                <ul class="use-link">
+                                    <li>
+                                        <a href="">Health Consultancy</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer Area -->
+
+    <!-- Start Copy Right Area -->
+    <div class="copy-right-area bg-color-f3f9f8">
+        <div class="container">
+            <div class="copy-right-content">
+                <p><span id="year-display"></span>© Proudly <a href="" target="_blank">Life Armada Consultancy Company</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- End Copy Right Area -->
+
+    <!-- Start Go Top Area -->
+    <div class="go-top">
+        <i class="ri-arrow-up-s-fill"></i>
+        <i class="ri-arrow-up-s-fill"></i>
+    </div>
+    <!-- End Go Top Area -->
+
+    <!-- Links of JS File -->
+    <script data-cfasync="false" src="{% static 'cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/meanmenu.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/carousel-thumbs.min.js' %}"></script>
+    <script src="{% static 'js/aos.min.js' %}"></script>
+    <script src="{% static 'js/appear.min.js' %}"></script>
+    <script src="{% static 'js/odometer.min.js' %}"></script>
+    <script src="{% static 'js/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/tween-max.min.js' %}"></script>
+    <script src="{% static 'js/form-validator.min.js' %}"></script>
+    <script src="{% static 'js/contact-form-script.js' %}"></script>
+    <script src="{% static 'js/ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script>
+        document.getElementById("id_username").className = 'form-control';
+        document.getElementById("id_password").className = 'form-control';
+
+        var date = new Date();
+        var year = date.getFullYear();
+        document.getElementById('year-display').innerHTML = year;
+    </script>
+</body>
+
+</html>
