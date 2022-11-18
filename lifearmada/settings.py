@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-hdu3-_kt+qjvwn+)jba$4f9ukra80jn&u-)=kp+&w)9$^1=hjk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.lifearmada.com', 'lifearmada.com']
 
 
 # Application definition
