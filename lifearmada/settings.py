@@ -24,6 +24,8 @@ SECRET_KEY = 'django-insecure-hdu3-_kt+qjvwn+)jba$4f9ukra80jn&u-)=kp+&w)9$^1=hjk
 DEBUG = True
 
 ALLOWED_HOSTS = ['www.lifearmada.com', 'lifearmada.com', '127.0.0.1']
+AUTH_USER_MODEL = 'main.User'
+
 
 
 # Application definition
@@ -84,16 +86,26 @@ DATABASES = {
 DATABASES = {
     'default': {
     'ENGING': 'django.db.backends.mysql',
-    'OPTIONS': {
-        'sql_mode': 'traditional'
-    },
     'NAME': 'blurmldy_life',
     'USER': 'blurmldy_armada',
     'PASSWORD': 'Lifearmada2020',
     'HOST': 'server54.web-hosting.com',
     'PORT': '3306',
+    'OPTIONS': { 'sql_mode': 'traditional'
+        },
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'blurmldy_life',
+#         'HOST': 'server54.web-hosting.com',
+#         'PORT': '3306',
+#         'USER': 'blurmldy_armada',
+#         'PASSWORD': 'Lifearmada2020',
+#     }
+# }
 
 
 # Password validation
